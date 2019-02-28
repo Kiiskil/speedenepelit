@@ -1,0 +1,38 @@
+﻿<Window x:Class="Alkuikkuna.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alkuikkuna"
+        mc:Ignorable="d"
+        Title="Sepen E-Pelit" Height="715" Width="1040"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness="1,3,5,1">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#ef5023">
+        <Button x:Name="btnPeli1" Content="Korttipeli" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnPeli1_Click"/>
+        <Button x:Name="btnPeli2" Content="Nopeuspeli" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnPeli2_Click"/>
+        <Button x:Name="btnHiScore" Content="HiScoret" HorizontalAlignment="Left" Margin="100,465,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnHiScore_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="100,565,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnExit_Click"/>
+        <Button x:Name="btnMute" Content="Pause" HorizontalAlignment="Left" Margin="790,565,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnMute_Click"/>
+        <Image Source="/Kuvat/BannerBottom.png" Margin="204,398,172,90"/>
+        <Image x:Name="imgSpede" HorizontalAlignment="Left" Source="/Kuvat/SpeedeNoBackground.png" Height="384" Margin="360,109,0,0" VerticalAlignment="Top" Width="490"/>
+        <Image Source="/Kuvat/BannerTop.png" Margin="204,34,190,504"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="20" Margin="596,638,0,0" TextWrapping="Wrap" Text="Intro Music: Arpanauts by Eric Skiff, ericskiff.com" VerticalAlignment="Top" Height="46" RenderTransformOrigin="0.612,0.804" Width="436"/>
+    </Grid>
+</Window>
